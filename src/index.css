@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #D9B544;
+    --gold-deep: #A78320;
+    --gold-soft: #F0D478;
+    --gold-light: #FDF4D4;
+    --accent-yellow: #FFC400;
+    --bg-dark: #090909;
+    --bg-card: #121214;
+    --bg-card-hover: #1a1a1e;
+    --text-primary: #F7F4ED;
+    --text-secondary: #B8B5B0;
+    --font-cinzel: 'Cinzel', serif;
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-manrope: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-manrope);
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Custom Royal Scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090909;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252219;
+    border-radius: 4px;
+    border: 1px solid rgba(217, 181, 68, 0.25);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D9B544;
+  }
+}
+
+/* Typography Utility Classes */
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+
+/* Royal Gold Gradient Text & Borders */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF6DD 0%, #D9B544 40%, #F0D478 70%, #A78320 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #D9B544, rgba(217, 181, 68, 0.2), #F0D478) 1;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(217, 181, 68, 0.28);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 0 50px rgba(217, 181, 68, 0.38);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(217, 181, 68, 0.45);
+  border-color: rgba(217, 181, 68, 0.85);
+}
+
+/* Studio Honeycomb Ceiling Hexagon Pattern Overlay */
+.hex-pattern-bg {
+  background-image: radial-gradient(circle at 50% 50%, rgba(217, 181, 68, 0.06) 0%, transparent 80%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(18, 18, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(217, 181, 68, 0.18);
+}
+
+.glass-panel-gold {
+  background: rgba(22, 20, 16, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(217, 181, 68, 0.35);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Pulse Glow Animation */
+@keyframes goldPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 4s ease-in-out infinite;
+}

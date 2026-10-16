@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF0CD" />
+      <stop offset="30%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA8012" />
+      <stop offset="100%" stop-color="#F1D27A" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#0A0A0B" />
+  <path d="M50 8 L88 24 C88 68 50 90 50 94 C50 90 12 68 12 24 Z" 
+        fill="#141416" stroke="url(#favGold)" stroke-width="3" />
+  <!-- Crown -->
+  <path d="M36 28 L42 36 L50 26 L58 36 L64 28 L62 40 L38 40 Z" fill="url(#favGold)" />
+  <!-- Monogram AB -->
+  <text x="50" y="68" font-family="'Cinzel', serif" font-size="30" font-weight="900" 
+        fill="url(#favGold)" text-anchor="middle">AB</text>
+</svg>
